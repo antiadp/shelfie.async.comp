@@ -30,7 +30,8 @@ export default class Bin extends Component {
         this.setState({price: e})
     }
     handleDelete(){
-        this.setState({name: null, price: null, img: null})
+        axios.put(`/api/products/${this.props.match.params.shelfnum}/${this.props.match.params.binnum}`,
+        this.setState({name: null, price: null, img: null}))
     }
 
     handleUpdateProd() {
